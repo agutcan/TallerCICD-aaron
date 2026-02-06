@@ -28,4 +28,12 @@ jobs:
               run: | 
                 echo "$PRIVATE_KEY" > clave-aws.pem
                 chmod 600 clave-aws.pem
-                ssh -o StrictHostKeyChecking=no -i clave-aws.pem ubuntu@${HOST}
+                ssh -o StrictHostKeyChecking=no -i clave-aws.pem ubuntu@${HOST} "
+                    echo 'Carpeta: ${pwd}'
+                    ls -la .
+                    sudo apt update
+                    sudo apt install -y apache2
+                    sudo service apache2 enable
+                    sudo service apache2 start
+                    sudo service apache2 status
+                "
