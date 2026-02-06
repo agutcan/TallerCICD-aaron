@@ -10,5 +10,7 @@ jobs:
         steps:
             - name: Cargar los ficheros de mi repo
               uses: actions/checkout@v6
-            - name: Vemos el contenido de la carpeta
-              run: ls -la
+            - name: Instalar node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
