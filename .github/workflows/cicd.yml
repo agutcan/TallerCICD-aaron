@@ -17,7 +17,7 @@ jobs:
             - name: Instalar REPO
               run: npm install
             - name: Haciendo los tests!
-              run: npm vitest run
+              run: npx vitest run
             - name: Build REPO
               run: npm run build
               
