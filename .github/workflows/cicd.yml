@@ -14,3 +14,7 @@ jobs:
               uses: actions/setup-node@v4
               with:
                 node-version: 20
+            - name: Instalar REPO
+              run: npm install
+            - name: Build REPO
+              run: npm run build
