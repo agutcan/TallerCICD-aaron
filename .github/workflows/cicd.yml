@@ -16,5 +16,8 @@ jobs:
                 node-version: 20
             - name: Instalar REPO
               run: npm install
+            - name: Haciendo los tests!
+              run: npm vitest run
             - name: Build REPO
               run: npm run build
+              
