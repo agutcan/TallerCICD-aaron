@@ -8,19 +8,7 @@ jobs:
     MiPrimeraAutomatizacion:
         runs-on: ubuntu-latest
         steps:
-            - name: Vamos a decir hola
-              run: echo "Hola, esta es mi primera automatización con GitHub Actions"
-            - name: ¿Quién soy?
-              run: whoami
-            - name: ¿Donde estoy?
-              run: lsb_release -a
-            - name: ¿Que tengo a la vista?
-              run: ls .
-            - name: ¿Que carpeta?
-              run: pwd
-            - name: Actualizamos repos..
-              run: sudo apt update
-            - name: Instalamos Programa critico
-              run: sudo apt install -y cowsay
-            - name: ¡Lo tengo! Vamos a ejecutarlo
-              run: cowsay "Que deje de llover ya"
+            - name: Cargar los ficheros de mi repo
+              uses: actions/checkout@v6
+            - name: Vemos el contenido de la carpeta
+              run: ls -la
