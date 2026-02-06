@@ -18,3 +18,9 @@ jobs:
               run: ls .
             - name: ¿Que carpeta?
               run: pwd
+            - name: Actualizamos repos..
+              run: sudo apt update
+            - name: Instalamos Programa critico
+              run: sudo apt install -y cowsay
+            - name: ¡Lo tengo! Vamos a ejecutarlo
+              run: cowsay "Que deje de llover ya"
